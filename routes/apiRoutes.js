@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const db = "../db/db.json";
+const db = "routes/../db/db.json";
 const fs = require("fs");
 
 // This mini version of the app has /api prepended to every route
@@ -21,7 +21,7 @@ router.post("/notes", (req, res) => {
         //data returns a JSON string so parse it to get an object
         let jsonDb = JSON.parse(data);
         //create an unique id for each newNotes
-        newNotes.id = json.length + 1;
+        newNotes.id = jsonDb.length + 1;
         //push the newNotes to the jsonDb
         jsonDb.push(newNotes);
         //stringify the object and write it to db
