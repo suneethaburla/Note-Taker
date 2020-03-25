@@ -27,5 +27,5 @@ For users that need to keep track of a lot of information, it's easy to forget o
 ## Video of the application functionality
 
 
-![gif](./public/assets/app_func.gif)
+![gif](./public/assets/gif/NoteTakerapp.gif)
 
