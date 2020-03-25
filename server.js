@@ -13,12 +13,14 @@ app.use(express.urlencoded({ extended: true }));
 const apiRoutes = require('./routes/apiRoutes.js');
 const htmlRoutes = require('./routes/htmlRoutes.js');
 
-//for every route that hits slash, use htmlRoutes
+//for every route that hits /, use htmlRoutes
 app.use ('/', htmlRoutes);
-//for every route that hits slash, use apiRoutes
+//for every route that hits /api, use apiRoutes
 app.use ('/api', apiRoutes);
 
 
 app.use(express.static('public'));
 
-app.listen(PORT);
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
